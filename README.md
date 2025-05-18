@@ -1,45 +1,48 @@
-# EXPO2025 パビリオン・イベント抽選申込検索ページ　フィルタリングスクリプト
+# EXPO2025 Pavilion & Event Filtering
 
-大阪・関西万博（Expo2025）のパビリオン・イベント抽選申込検索ページでの閲覧を効率化する Tampermonkey スクリプトです。
+A Tampermonkey script to streamline browsing of the Osaka-Kansai Expo (Expo2025) pavilion and event lottery application search page (2-month and 7-day advance lotteries).
 
-## 機能
+## Execution Environment
 
-1. **車いす関連タイル非表示機能**
+- Chrome browser or any browser with the Tampermonkey extension installed
 
-   - 車いす対応や障がい者向けのイベントタイルを自動で非表示にします
-   - カスタマイズ可能なキーワードリストで検出します
+## Features
 
-2. **「もっと見る」自動クリック機能**
-   - 「もっと見る」ボタンを自動的にクリックし、全イベントを表示します
-   - ボタンが非活性状態になると自動的に停止します
-   - 完了時に統計情報が表示されます
+1. **Wheelchair-related Tile Hiding Function**
 
-## インストール方法
+   - Automatically hides event tiles for wheelchair-accessible or disability-focused events
+   - Detects using a customizable keyword list
 
-1. Tampermonkey ブラウザ拡張機能をインストールします
+2. **"See More" Automatic Click Function**
+   - Automatically clicks the "See More" button to display all events
+   - Automatically stops when the button becomes inactive
+   - Displays statistical information upon completion
 
-   - [Chrome 版](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-   - [Firefox 版](https://addons.mozilla.org/ja/firefox/addon/tampermonkey/)
+## Installation Method
 
-2. Tampermonkey ダッシュボードを開き、「新規スクリプトを追加」をクリックします
+1. Install the Tampermonkey browser extension
 
-3. `tampermonkey.js`の内容を全てコピーしてエディタに貼り付け、保存します
+   - [Chrome version](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+   - [Firefox version](https://addons.mozilla.org/ja/firefox/addon/tampermonkey/)
 
-## 使い方
+2. Open the Tampermonkey dashboard and click "Add New Script"
 
-1. 公式チケットサイト [https://ticket.expo2025.or.jp/event_search/](https://ticket.expo2025.or.jp/event_search/) にアクセスします
+3. Copy all contents of `tampermonkey.js` and paste them into the editor, then save
 
-2. スクリプトが自動的に実行され、以下の動作を行います:
+## How to Use
 
-   - 車いす関連タイルを非表示にする
-   - 「もっと見る」ボタンを自動クリックして全イベントを読み込む
-   - 全ての読み込みが完了すると通知メッセージを表示
+1. Access the official ticket site [https://ticket.expo2025.or.jp/event_search/](https://ticket.expo2025.or.jp/event_search/)
 
-3. コンソールに進捗状況（クリック回数・非表示タイル数）が表示されます
+2. The script will automatically execute and perform the following actions:
 
-## カスタマイズ
+   - Hide wheelchair-related tiles
+   - Automatically click the "See More" button to load all events
 
-スクリプト内の以下の設定を変更することができます:
+3. Progress status (number of clicks, number of hidden tiles) will be displayed in the console log
+
+## Customization
+
+You can change the following settings in the script:
 
 ```javascript
 const KEYWORDS = [
@@ -51,20 +54,20 @@ const KEYWORDS = [
   "障がい者",
   "障害がある方向け",
 ];
-const CLICK_INTERVAL = 4000; // クリック間隔 ms
-const DEBUG = true; // デバッグログを有効化
+const CLICK_INTERVAL = 4000; // Click interval in ms
+const DEBUG = true; // Enable debug logs
 ```
 
-- `KEYWORDS`: 非表示にするタイルのキーワードリスト
-- `CLICK_INTERVAL`: クリックの間隔（ミリ秒）
-- `DEBUG`: コンソールログの有効/無効
+- `KEYWORDS`: List of keywords for tiles to hide
+- `CLICK_INTERVAL`: Click interval (milliseconds)
+- `DEBUG`: Enable/disable console logs
 
-## 注意事項
+## Notes
 
-- このスクリプトは公式サイトの仕様変更により動作しなくなる可能性があります
-- スクリプトの使用は自己責任でお願いします
-- スクリプトの過剰な利用はサーバーに負荷をかける可能性があるため、適切なクリック実行間隔を設定してください
+- This script may stop working due to changes in the official site specifications
+- Use of this script is **at your own risk**
+- Excessive use of the script may place a load on the server, so please **set an appropriate click execution interval**
 
-## ライセンス
+## License
 
-MIT ライセンス
+MIT License
