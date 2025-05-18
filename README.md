@@ -1,6 +1,6 @@
 # EXPO2025 Pavilion & Event Filtering / EXPO2025 パビリオン・イベントフィルタリング
 
-A Tampermonkey script to streamline browsing of the Osaka-Kansai Expo (Expo2025) pavilion and event lottery application search page (2-month and 7-day advance lotteries).
+A Tampermonkey script to streamline browsing of the Osaka-Kansai Expo (Expo2025) pavilion and event lottery application search page (2-month and 7-day advance lotteries and 3-day advance first-come-first-served).
 
 大阪・関西万博（Expo2025）のパビリオンやイベントの抽選申込検索ページ（2 ヶ月前抽選、7 日前抽選及び３日前先着）をスムーズに閲覧するための Tampermonkey スクリプトです。
 
